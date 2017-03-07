@@ -1,0 +1,39 @@
+<html>
+<head>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script>
+var my_pic = new Image();
+my_pic.src = "http://i1356.photobucket.com/albums/q729/eleftheria_b/my%20face/kappalambdataurho-v3-with-filter_zps5xlhlons.png";
+function draw(){
+    var ctx = document.getElementById('my_canvas').getContext('2d');
+
+    // drawImage() can take either an HTMLImageElement, an HTMLCanvasElement, 
+    // or an HTMLVideoElement as the first parameter
+
+    // drawImage(image, x, y);
+    // ctx.drawImage(my_pic, 20, 20); // Positioning only
+
+    // drawImage(image, x, y, w, h);
+    // ctx.drawImage(my_pic, 20, 20, 100, 100); // Positioning and sizing
+
+    // drawImage(my_pic, clipX, clipY, clipW, clipH, x, y, w, h);
+    ctx.drawImage(my_pic, 390, 0, 900, 900, 20, 20, my_pic.height/3, my_pic.width/3); // Positioning, sizing, clipping
+	
+}
+window.onload = draw;
+</script>
+</head>
+<body>
+  
+  <h3 style="text-align: center">Canvas | Building and Drawing Paths </h3>
+  
+<canvas id="my_canvas" width="250" height="320"></canvas>
+  
+  <div style="text-align: center">
+    <h5><a href="http://www.eleftheriabatsou.com" target="_blank">Eleftheria Batsou</a> | <a href="http://codepen.io/EleftheriaBatsou" target="_blank">Projects</a></h5>
+  </div> <!-- end footer -->
+  
+</body>  
+</html>
